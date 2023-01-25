@@ -1,52 +1,86 @@
-pipeline {
+//pipeline {
+//
+//  agent {
+//    label 'ansible'
+//  }
+//
+//  stages {
+//
+//    stage('Hello') {
+//      steps {
+//        echo 'Hello World'
+//      }
+//    }
+//
+//    stage('Hello1') {
+//      steps {
+//        echo 'Hello World'
+//      }
+//    }
+//
+//    stage('Hello2') {
+//      steps {
+//        echo 'Hello World'
+//        mail bcc: '', body: 'Heloo this is a test email ', cc: '', from: '', replyTo: '', subject: 'Test', to: 'raghuk.vit@gmail.com'
+//      }
+//    }
+//
+//
+//  }
+//
+//  post {
+//    always {
+//      echo "sending email"
+//    }
+//  }
+//
+//}
 
-agent {
-  label 'workstation'
+@Library('roboshop') _
 
-  }
+env.abc = "Some Data"
+test1.new1()
 
- stages{
-
-     stage('compile/build'){
-       steps
-         {
-              echo 'compile'
-          }
-         }
-
-      stage('unit Tests'){
-             steps
-               {
-                    echo 'unit tests'
-                }
-               }
-       stage('compile/build'){
-              steps
-                {
-                     echo "compile"
-                 }
-                }
-        stage('quality control'){
-                      steps
-                        {
-                             echo "quality control"
-                         }
-                        }
-
-        stage('upload code to centralised place'){
-                      steps
-                        {
-                             echo "upload code to centralised place"
-                         }
-                        }
-
-
-
-
-   }
-     post {
-       always{
-          echo "sending email"
-       }
-      }
-}
+//pipeline {
+//  agent any
+//  stages {
+//    stage('test') {
+//      steps {
+//        script {
+//          env.abc = "Hello"
+//          def xyz = 10
+//          def x1 = true
+//
+//          print "abc = ${abc}"
+//          print "xyz = ${xyz}"
+//
+//          print abc
+//
+//          def new1() {
+//            print "hello"
+//          }
+//
+//          new1()
+//
+//
+//
+//        }
+//
+//        script {
+//          print "abc = ${abc}"
+//        }
+//
+//      }
+//    }
+//
+//    stage('test2') {
+//      steps {
+//        script {
+//          print "abc = ${abc}"
+//        }
+//      }
+//    }
+//
+//  }
+//
+//
