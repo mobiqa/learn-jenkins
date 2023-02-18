@@ -1,8 +1,6 @@
 pipeline {
 
-  agent {
-    label 'ansible'
-  }
+  agent any
 
   stages {
 
@@ -12,4 +10,6 @@ pipeline {
       }
     }
 
+  }
 
+}
